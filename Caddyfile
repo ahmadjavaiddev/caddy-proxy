@@ -1,11 +1,15 @@
-inngest.buildlayer.cloud {
-    reverse_proxy 76.13.177.128:8388
-}
-
 news.buildlayer.cloud {
     reverse_proxy news-scraper:3000
 }
 
 radius.buildlayer.cloud {
     reverse_proxy 76.13.177.128:8002
+}
+
+trending.buildlayer.cloud { 
+    reverse_proxy trending-automation-scraper:3000
+}
+
+inngest.buildlayer.cloud {
+    reverse_proxy global_inngest:8288
 }
