@@ -13,6 +13,12 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
 
 volumes:
   caddy_data:
