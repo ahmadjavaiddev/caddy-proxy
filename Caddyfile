@@ -13,3 +13,7 @@ trending.buildlayer.cloud {
 inngest.buildlayer.cloud {
     reverse_proxy global_inngest:8288
 }
+
+blaster.buildlayer.cloud {
+    reverse_proxy email_marketing_backend:8000
+}
