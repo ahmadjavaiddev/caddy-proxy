@@ -3,7 +3,7 @@ inngest.buildlayer.cloud {
 }
 
 news.buildlayer.cloud {
-    reverse_proxy 76.13.177.128:3000
+    reverse_proxy news-scraper:3000
 }
 
 radius.buildlayer.cloud {
