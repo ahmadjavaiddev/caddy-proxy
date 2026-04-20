@@ -19,6 +19,9 @@ trending.buildlayer.cloud {
 }
 
 inngest.buildlayer.cloud {
+    basic_auth {
+        admin {env.INNGEST_AUTH_HASH}
+    }
     reverse_proxy global_inngest:8288
 }
 

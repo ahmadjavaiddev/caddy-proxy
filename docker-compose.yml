@@ -9,6 +9,8 @@ services:
     dns:
       - 8.8.8.8
       - 1.1.1.1
+    environment:
+      INNGEST_AUTH_HASH: ${INNGEST_AUTH_HASH}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
