@@ -2,8 +2,6 @@
     email you@buildlayer.cloud
     on_demand_tls {
         ask http://email_marketing_backend:8000/internal/tls-allow
-        interval 2m
-        burst 5
     }
 }
 
