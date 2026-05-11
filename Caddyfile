@@ -29,6 +29,9 @@ blaster.buildlayer.cloud {
     reverse_proxy email_marketing_backend:8000
 }
 
+blaster.buildlayer.cloud {
+    reverse_proxy manual-call-runner:8787
+}
 
 # Catch-all for customer tracking CNAMEs
 :443 {
