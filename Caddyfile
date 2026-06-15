@@ -33,6 +33,10 @@ leads.buildlayer.cloud {
     reverse_proxy manual-call-runner:8787
 }
 
+social.buildlayer.cloud {
+    reverse_proxy sma-backend:8000
+}
+
 # Catch-all for customer tracking CNAMEs
 :443 {
     tls {
