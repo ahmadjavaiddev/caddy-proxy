@@ -37,6 +37,10 @@ social.buildlayer.cloud {
     reverse_proxy sma-backend:8000
 }
 
+poster.buildlayer.cloud {
+    reverse_proxy autoposter-backend:8000
+}
+
 # Catch-all for customer tracking CNAMEs
 :443 {
     tls {
