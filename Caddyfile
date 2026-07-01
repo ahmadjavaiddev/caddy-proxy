@@ -41,6 +41,19 @@ poster.buildlayer.cloud {
     reverse_proxy autoposter-backend:8000
 }
 
+
+cdn.tunly.cloud {
+    tls /etc/caddy/cert/cdn.tunly.cloud.pem /etc/caddy/cert/cdn.tunly.cloud.key
+    @ws {
+        header Connection *Upgrade*
+        header Upgrade websocket
+    }
+    reverse_proxy @ws 3x-ui:2096
+    respond "OK" 200
+}
+
+
+
 # Catch-all for customer tracking CNAMEs
 :443 {
     tls {
