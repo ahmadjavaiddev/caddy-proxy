@@ -43,7 +43,7 @@ poster.buildlayer.cloud {
 
 
 cdn.tunly.cloud {
-    tls /etc/caddy/cert/cdn.tunly.cloud.pem /etc/caddy/cert/cdn.tunly.cloud.key
+    tls /data/cert/cdn.tunly.cloud.pem /data/cert/cdn.tunly.cloud.key
     @ws {
         header Connection *Upgrade*
         header Upgrade websocket
