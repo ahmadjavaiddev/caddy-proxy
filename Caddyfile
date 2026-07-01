@@ -43,12 +43,9 @@ poster.buildlayer.cloud {
 
 cdn.tunly.cloud {
     tls /data/cert/cdn.tunly.cloud.pem /data/cert/cdn.tunly.cloud.key
-    @ws {
-        path /cdn-cache
-        header Connection *Upgrade*
-        header Upgrade websocket
+    handle /cdn-cache {
+        reverse_proxy 3x-ui:2096
     }
-    reverse_proxy @ws 3x-ui:2096
     handle {
         respond "OK" 200
     }
