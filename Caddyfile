@@ -44,13 +44,15 @@ poster.buildlayer.cloud {
 cdn.tunly.cloud {
     tls /data/cert/cdn.tunly.cloud.pem /data/cert/cdn.tunly.cloud.key
     handle /cdn-cache {
-        reverse_proxy 3x-ui:2096
+        reverse_proxy 3x-ui:2096 {
+            header_up Host cdn.tunly.cloud
+        }
     }
     handle {
         respond "OK" 200
     }
 }
- 
+
 # Catch-all for customer tracking CNAMEs
 :443 {
     tls {
