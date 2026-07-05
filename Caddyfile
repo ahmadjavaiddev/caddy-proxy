@@ -41,6 +41,10 @@ poster.buildlayer.cloud {
     reverse_proxy autoposter-backend:8000
 }
 
+memory.tunly.cloud {
+    reverse_proxy agent-memory:6767
+}
+
 cdn.tunly.cloud {
     tls /data/cert/cdn.tunly.cloud.pem /data/cert/cdn.tunly.cloud.key
     handle /cdn-cache {
